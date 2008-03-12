@@ -1,0 +1,25 @@
+---
+name: CPAN-LinksToDocs-No404s
+version: 0.001
+author:
+  - 'Zoffix Znet <zoffix@cpan.org>'
+abstract: get links to http://search.cpan.org documentation by giving short "tags" and make sure all of them point to existant documentation
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  CPAN::LinksToDocs: 0.001
+  Carp: 1.04
+  Class::Data::Accessor: 0.04001
+  LWP::UserAgent: 2.036
+  URI: 1.35
+build_requires:
+  Test::More: 0
+provides:
+  CPAN::LinksToDocs::No404s:
+    file: lib/CPAN/LinksToDocs/No404s.pm
+    version: 0.001
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
