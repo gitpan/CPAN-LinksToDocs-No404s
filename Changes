@@ -1,5 +1,8 @@
 Revision history for CPAN-LinksToDocs-No404s
 
+0.002   Mar 12, 2008
+        Fixed broken test suite
+
 0.001   Mar 11, 2008
         First version, released on an unsuspecting world.
 

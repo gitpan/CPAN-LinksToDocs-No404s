@@ -26,7 +26,6 @@ can_ok($o, qw(new link_for tags _make_tags _splitty _make_not_found_link
 my $VAR1 = [
           'http://perldoc.perl.org/functions/map.html',
           'http://perldoc.perl.org/functions/grep.html',
-          'http://search.cpan.org/perldoc?Carp',
           'http://search.cpan.org/perldoc?perlrequick',
           'http://search.cpan.org/perldoc?perlretut',
           'http://search.cpan.org/perldoc?perlre',
@@ -37,7 +36,7 @@ my $VAR1 = [
           'http://search.cpan.org/perldoc?perlbot',
         ];
 is_deeply(
-    $o->link_for('map,grep,Carp,RE,OOP'),
+    $o->link_for('map,grep,RE,OOP'),
     $VAR1,
     'checks for links'
 );

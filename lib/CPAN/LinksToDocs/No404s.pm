@@ -3,7 +3,7 @@ package CPAN::LinksToDocs::No404s;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use base qw(Class::Data::Accessor  CPAN::LinksToDocs);
 use Carp;

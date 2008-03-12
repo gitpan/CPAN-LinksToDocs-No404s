@@ -1,6 +1,6 @@
 ---
 name: CPAN-LinksToDocs-No404s
-version: 0.001
+version: 0.002
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
 abstract: get links to http://search.cpan.org documentation by giving short "tags" and make sure all of them point to existant documentation
@@ -18,7 +18,7 @@ build_requires:
 provides:
   CPAN::LinksToDocs::No404s:
     file: lib/CPAN/LinksToDocs/No404s.pm
-    version: 0.001
+    version: 0.002
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
