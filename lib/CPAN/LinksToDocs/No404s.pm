@@ -3,7 +3,7 @@ package CPAN::LinksToDocs::No404s;
 use warnings;
 use strict;
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 use base qw(Class::Data::Accessor  CPAN::LinksToDocs);
 use Carp;
@@ -75,9 +75,9 @@ CPAN::LinksToDocs::No404s - get links to http://search.cpan.org documentation by
     use strict;
     use warnings;
 
-    use CPAN::LinksToDocs;
+    use CPAN::LinksToDocs::No404s;
 
-    my $linker = CPAN::LinksToDocs->new;
+    my $linker = CPAN::LinksToDocs::No404s->new;
 
     for ( @{ $linker->link_for('map,grep,RE,OOP') } ) {
         print "$_\n";
@@ -96,14 +96,13 @@ The module is similiar to L<CPAN::LinksToDocs> module, except this one
 will check if responses to non-predefined tags lead to existant
 documentation.
 
-
 =head1 CONSTRUCTOR
 
 =head2 new
 
-    my $linker = CPAN::LinksToDocs->new;
+    my $linker = CPAN::LinksToDocs::No404s->new;
 
-    my $linker2 = CPAN::LinksToDocs->new(
+    my $linker2 = CPAN::LinksToDocs::No404s->new(
         tags => {
             some    => 'http://there.somewhere',
             map     => 'http://some_custom.link.to.map.function',
@@ -115,7 +114,7 @@ documentation.
         ua  => LWP::UserAgent->new( timeout => 20, agent => 'foos!' ),
     );
 
-Returns a freshly baked C<CPAN::LinksToDocs> object. Takes several
+Returns a freshly baked C<CPAN::LinksToDocs::No404s> object. Takes several
 I<optional> arguments which are as follows;
 
 =head3 tags
@@ -224,8 +223,6 @@ Returns a currently used L<LWP::UserAgent> object used for checking 404s.
 Takes one optional argument which must be an L<LWP::UserAgent>
 object, and the object you specify will be used in any subsequent checks
 of non-predefined "tags".
-
-=head1 AUTHOR
 
 =head1 TAGS
 
